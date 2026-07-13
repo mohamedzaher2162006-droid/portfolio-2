@@ -3,74 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio | Mohamed</title>
+<title>Mohamed | Graphic Designer</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
     margin: 0;
-    font-family: Arial;
-    background: #0f0f0f;
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #0d0d0d;
+    color: #fff;
 }
 
 /* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background: #111;
+    padding: 20px 10%;
+    background: rgba(0,0,0,0.7);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
 }
 
 nav a {
-    color: white;
-    margin: 0 10px;
+    color: #fff;
     text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffcc;
 }
 
 /* Hero */
 .hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
-    padding: 80px 20px;
 }
 
 .hero img {
-    width: 150px;
+    width: 160px;
     border-radius: 50%;
+    border: 3px solid #00ffcc;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 32px;
+    font-size: 40px;
+}
+
+.hero span {
+    color: #00ffcc;
 }
 
 .hero p {
+    margin-top: 10px;
     color: #aaa;
 }
 
 /* Sections */
 section {
-    padding: 50px 20px;
-    text-align: center;
+    padding: 80px 10%;
 }
 
 h2 {
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-/* Gallery */
-.gallery {
+/* Cards */
+.card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00ffcc44;
+}
+
+/* Grid */
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
 }
 
-.gallery img {
+.grid img {
     width: 100%;
     border-radius: 10px;
+    transition: 0.3s;
+}
+
+.grid img:hover {
+    transform: scale(1.05);
 }
 
 /* Pricing */
-.pricing p {
-    margin: 10px 0;
+.pricing .card {
+    text-align: center;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #00ffcc;
+    color: black;
+    border-radius: 30px;
+    text-decoration: none;
 }
 
 /* WhatsApp */
@@ -79,10 +140,8 @@ h2 {
     bottom: 20px;
     right: 20px;
     background: #25D366;
-    padding: 15px 20px;
-    border-radius: 50px;
-    color: white;
-    text-decoration: none;
+    padding: 15px;
+    border-radius: 50%;
 }
 
 /* Footer */
@@ -102,49 +161,64 @@ footer {
     <h3>Mohamed</h3>
     <div>
         <a href="#logos">لوجوهات</a>
-        <a href="#social">سوشيال ميديا</a>
-        <a href="#branding">هوية بصرية</a>
+        <a href="#social">سوشيال</a>
+        <a href="#branding">هوية</a>
         <a href="#contact">تواصل</a>
     </div>
 </nav>
 
 <!-- Hero -->
 <div class="hero">
-    <img src="me.jpg" alt="صورتي">
-    <h1>مصمم جرافيك احترافي</h1>
-    <p>تصميم لوجوهات – سوشيال ميديا – هويات بصرية تساعد مشروعك يكبر</p>
+    <img src="me.jpg">
+    <h1>أنا <span>Mohamed</span></h1>
+    <p>مصمم جرافيك متخصص في بناء الهوية البصرية للمشاريع</p>
+    <a href="https://wa.me/201093524689" class="btn">ابدأ مشروعك</a>
 </div>
 
 <!-- About -->
 <section>
 <h2>من أنا</h2>
+<div class="card">
 <p>
-أنا مصمم جرافيك متخصص في تصميم اللوجوهات والسوشيال ميديا والهويات البصرية.
-بساعد المشاريع إنها تظهر بشكل احترافي يجذب العملاء.
+مصمم جرافيك أساعد المشاريع إنها تظهر بشكل احترافي وتجذب العملاء.
+متخصص في اللوجوهات والسوشيال ميديا والهويات البصرية.
 </p>
+</div>
 </section>
 
 <!-- Services -->
 <section>
 <h2>خدماتي</h2>
-<p>✔ تصميم لوجو احترافي</p>
-<p>✔ تصميم بوستات سوشيال ميديا</p>
-<p>✔ تصميم هوية بصرية كاملة</p>
+<div class="grid">
+<div class="card">تصميم لوجو احترافي</div>
+<div class="card">تصميم بوستات سوشيال</div>
+<div class="card">هوية بصرية كاملة</div>
+</div>
 </section>
 
 <!-- Pricing -->
 <section class="pricing">
-<h2>الأسعار</h2>
-<p>🔹 لوجو: 300 جنيه</p>
-<p>🔹 10 بوستات: 500 جنيه</p>
-<p>🔹 هوية بصرية: 1000 جنيه</p>
+<h2>الباقات</h2>
+<div class="grid">
+<div class="card">
+<h3>لوجو</h3>
+<p>300 جنيه</p>
+</div>
+<div class="card">
+<h3>سوشيال</h3>
+<p>500 جنيه / 10 بوست</p>
+</div>
+<div class="card">
+<h3>هوية</h3>
+<p>1000 جنيه</p>
+</div>
+</div>
 </section>
 
 <!-- Logos -->
 <section id="logos">
 <h2>اللوجوهات</h2>
-<div class="gallery">
-
+<div class="grid">
 <img src="logo1.jpg">
 <img src="logo2.jpg">
 <img src="logo3.jpg">
@@ -157,15 +231,13 @@ footer {
 <img src="logo10.jpg">
 <img src="logo11.jpg">
 <img src="logo12.jpg">
-
 </div>
 </section>
 
 <!-- Social -->
 <section id="social">
 <h2>سوشيال ميديا</h2>
-<div class="gallery">
-
+<div class="grid">
 <img src="social1.jpg">
 <img src="social2.jpg">
 <img src="social3.jpg">
@@ -179,38 +251,33 @@ footer {
 <img src="social11.jpg">
 <img src="social12.jpg">
 <img src="social13.jpg">
-
 </div>
 </section>
 
 <!-- Branding -->
 <section id="branding">
 <h2>هوية بصرية</h2>
-<div class="gallery">
-
+<div class="grid">
 <img src="brand1.jpg">
 <img src="brand2.jpg">
 <img src="brand3.jpg">
 <img src="brand4.jpg">
-
 </div>
 </section>
 
 <!-- Contact -->
-<section id="contact">
+<section id="contact" class="contact">
 <h2>تواصل معي</h2>
 <p>📞 01093524689</p>
-<p>متاح على واتساب للطلبات</p>
+<a href="https://wa.me/201093524689" class="btn">راسلني الآن</a>
 </section>
 
 <!-- WhatsApp -->
-<a class="whatsapp" href="https://wa.me/201093524689" target="_blank">
-تواصل واتساب
-</a>
+<a href="https://wa.me/201093524689" class="whatsapp"></a>
 
 <!-- Footer -->
 <footer>
-<p>© 2026 جميع الحقوق محفوظة</p>
+<p>© Mohamed 2026</p>
 </footer>
 
 </body>
